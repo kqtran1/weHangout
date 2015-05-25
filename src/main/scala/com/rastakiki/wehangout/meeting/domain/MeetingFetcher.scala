@@ -1,8 +1,8 @@
-package com.rastakiki.wehangout.meeting
+package com.rastakiki.wehangout.meeting.domain
 
 class MeetingFetcher(val meetingRepository: MeetingRepository) {
 
-  def getAllMeetingForUser(user: User): Seq[Meeting] = {
+  def getAllMeetings(): Seq[Meeting] = {
     meetingRepository.findAll
   }
 

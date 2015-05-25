@@ -1,4 +1,6 @@
-package com.rastakiki.wehangout.meeting
+package com.rastakiki.wehangout.meeting.infrastructure
+
+import com.rastakiki.wehangout.meeting.domain.{Meeting, MeetingRepository}
 
 import scala.collection.mutable
 

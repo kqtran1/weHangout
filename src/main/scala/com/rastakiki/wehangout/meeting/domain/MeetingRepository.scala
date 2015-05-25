@@ -1,4 +1,4 @@
-package com.rastakiki.wehangout.meeting
+package com.rastakiki.wehangout.meeting.domain
 
 trait MeetingRepository {
 
