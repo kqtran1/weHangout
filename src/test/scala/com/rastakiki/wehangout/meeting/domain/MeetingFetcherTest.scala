@@ -6,7 +6,7 @@ import org.scalatest.{FlatSpec, Matchers}
 
 class MeetingFetcherTest extends FlatSpec with Matchers {
 
-  "Given an Anonymous user and an empty meeting list when user display meeting, user " should " see no meeting" in {
+  "Given an Anonymous user and an empty meeting list when user display meeting, user " should " not see any meeting" in {
       val presentMeetingUseCase = new MeetingFetcher(new InMemmoryMeetingRepository)
 
       val meetings: Seq[Meeting] = presentMeetingUseCase.getAllMeetings()
@@ -15,7 +15,7 @@ class MeetingFetcherTest extends FlatSpec with Matchers {
 
   }
 
-  "Given an Anonymous user and a meeting list when user display meeting, user " should " display all meetings" in {
+  "Given an Anonymous user and a meeting list when user display meeting, user " should " see all meetings" in {
       val meetingRepository = new InMemmoryMeetingRepository
       meetingRepository.save((new MeetingBuilder().withTitle("Software Crafmanship Meetup").build))
       meetingRepository.save((new MeetingBuilder().withTitle("Java Performance Meetup").build))
